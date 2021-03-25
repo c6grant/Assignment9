@@ -1,5 +1,8 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
+@*This is the basic shared layout info that is used across all views*@
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,16 +14,10 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-
-
                 <a class="navbar-brand" asp-controller="Home" asp-action="Index">Home</a>
                 <a class="navbar-brand" asp-controller="Home" asp-action="MovieInput">Movie Input</a>
                 <a class="navbar-brand" asp-controller="Home" asp-action="MovieList">Movie List</a>
                 <a class="navbar-brand" asp-controller="Home" asp-action="Podcasts">My Podcasts</a>
-
-
-
-
             </div>
         </nav>
     </header>
@@ -37,8 +34,6 @@
             &copy; 2021 - Assignment3 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
-
-
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

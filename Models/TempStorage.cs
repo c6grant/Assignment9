@@ -5,13 +5,15 @@ using System.Threading.Tasks;
 
 namespace Assignment3.Models
 {
+
+    //This TempStorage class is no longer used w/ the sqlite implementation
     public class TempStorage
     {
-        private static List<InputResponse> inputs = new List<InputResponse>();
+        private static List<MovieItem> inputs = new List<MovieItem>();
 
-        public static IEnumerable<InputResponse> Inputs => inputs;
+        public static IEnumerable<MovieItem> Inputs => inputs;
 
-        public static void AddInput(InputResponse input)
+        public static void AddInput(MovieItem input)
         {
             inputs.Add(input);
         }

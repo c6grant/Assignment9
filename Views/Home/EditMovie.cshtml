@@ -2,37 +2,45 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
-    ViewData["Title"] = "Movie Input";
-
 }
+
 @model Assignment3.Models.MovieItem
 
+@*@model IEnumerable<Assignment3.Models.MovieItem>*@
 
-@*This page is for users to be able to input each element of a movie*@
 
 
+@*This View is meant for users to be able to edit any movie that they select*@
+ 
 <div class="text-center">
 
-    <form asp-action="MovieInput" method="post">
+
+    <h1>EDIT MOVIE</h1>
+
+    <form asp-action="EditMovieSubmit" method="post">
 
         <div>
-            <label asp-for="Category">Category:</label>
-            <input asp-for="Category" />
+            <input hidden name="MovieID" value="@Model.MovieID" />
+        </div>
+
+        <div>
+            <label asp-for="@Model.Category">Category:</label>
+            <input asp-for="@Model.Category" value="@Model.Category" />
         </div>
 
         <div>
             <label asp-for="Title">Title:</label>
-            <input asp-for="Title" />
+            <input asp-for="Title" value="@Model.Title" />
         </div>
 
         <div>
             <label asp-for="Year">Year:</label>
-            <input asp-for="Year" />
+            <input asp-for="Year" value="@Model.Year" />
         </div>
 
         <div>
             <label asp-for="Director">Director:</label>
-            <input asp-for="Director" />
+            <input asp-for="Director" value="@Model.Director" />
         </div>
 
         <div>
@@ -58,16 +66,17 @@
 
         <div>
             <label asp-for="LentTo">Lent To:</label>
-            <input asp-for="LentTo" />
+            <input asp-for="LentTo" value="@Model.LentTo" />
         </div>
 
         <div>
             <label asp-for="Notes">Notes:</label>
-            <input asp-for="Notes" />
+            <input asp-for="Notes" value="@Model.Notes" />
         </div>
 
-        <button type="submit" class="btn btn-success">Submit Movie</button>
+        <button type="submit" class="btn btn-success">Submit Edit</button>
 
         <div asp-validation-summary="All"></div>
     </form>
+
 </div>
